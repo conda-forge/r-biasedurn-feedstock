@@ -1,4 +1,4 @@
-{% set version = '1.07' %}
+{% set version = "2.0.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BiasedUrn_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BiasedUrn/BiasedUrn_{{ version }}.tar.gz
-  sha256: 2377c2e59d68e758a566452d7e07e88663ae61a182b9ee455d8b4269dda3228e
+  sha256: 205e7f8da8fba76fbf4bd9d12a027599b685dedecc818aad39de5c51dc47b856
 
 build:
-  merge_build_host: True  # [win]
-  number: 1005
+  merge_build_host: true  # [win]
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -46,13 +46,10 @@ test:
 about:
   home: http://www.agner.org/random/ http://www.r-project.org
   license: GPL-3
-  summary: Statistical models of biased sampling in the form of  univariate and multivariate
-    noncentral hypergeometric distributions,  including Wallenius' noncentral hypergeometric
-    distribution and Fisher's noncentral hypergeometric distribution  (also called extended
-    hypergeometric distribution).   See vignette("UrnTheory") for explanation of these
-    distributions.
+  summary: Statistical models of biased sampling in the form of  univariate and multivariate noncentral hypergeometric distributions,  including Wallenius' noncentral hypergeometric distribution and Fisher's noncentral hypergeometric distribution  (also called extended hypergeometric distribution).   See vignette("UrnTheory")
+    for explanation of these distributions.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
