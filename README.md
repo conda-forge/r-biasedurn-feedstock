@@ -3,6 +3,7 @@ About r-biasedurn-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-biasedurn-feedstock/blob/main/LICENSE.txt)
 
+
 About r-biasedurn
 -----------------
 
@@ -11,6 +12,7 @@ Home: http://www.agner.org/random/ http://www.r-project.org
 Package license: GPL-3.0-only
 
 Summary: Statistical models of biased sampling in the form of  univariate and multivariate noncentral hypergeometric distributions,  including Wallenius' noncentral hypergeometric distribution and Fisher's noncentral hypergeometric distribution  (also called extended hypergeometric distribution).   See vignette("UrnTheory") for explanation of these distributions.
+
 About r-biasedurn
 -----------------
 
