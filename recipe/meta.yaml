@@ -1,4 +1,4 @@
-{% set version = "2.0.11" %}
+{% set version = "2.0.12" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/BiasedUrn_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/BiasedUrn/BiasedUrn_{{ version }}.tar.gz
-  sha256: 6295f1a12cd9d425cc03ec05a993fba04f539007c1754f23d7043a585b9e7537
+  sha256: 29b3b596431c5364e3be9aae2068adb44a205de31c66ec3fa1ef06a4ab8c5792
 
 build:
   merge_build_host: true  # [win]
@@ -22,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
